@@ -17,7 +17,7 @@ var settings
 var server
 
 settings = getSettings(process.env.MODE)
-server = hapi.createServer('localhost', settings.port, settings.server)
+server = hapi.createServer('0.0.0.0', settings.port, settings.server)
 
 good = {
   plugin: good,
