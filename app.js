@@ -17,7 +17,7 @@ var settings
 var server
 
 settings = getSettings(process.env.MODE)
-server = hapi.createServer('localhost', settings.port, settings.server)
+server = hapi.createServer(settings.host, settings.port, settings.server)
 
 good = {
   plugin: good,
@@ -117,6 +117,6 @@ server.pack.register([good, cookieAuth, bell, crumb, models], function() {
   })
 
   applyRoutes(server, settings.routes)
-  console.log('starting server on http://localhost:' + settings.port)
+  console.log('starting server on http://' settings.host + ':' + settings.port)
   server.start()
 })

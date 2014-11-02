@@ -1,12 +1,25 @@
 {
-  "port": 8080,
+  "url": {
+    "internal": {
+      "host": "0.0.0.0",
+      "port": 8080
+    },
+    "external": {
+      "host": "localhost",
+      "port": 8080
+    },
+    "static": {
+      "host": "localhost",
+      "port": 8080,
+      "pathname": "/public/"
+    }
+  },
   "SECRET_KEY": "YER A SECRET",
   "githubClientID": "",
   "githubSyncToken": "",
   "githubClientSecret": "",
   "googleAnalytics": "",
   "isSecure": false,
-  "staticURL": "http://localhost:8080/public/",
   "routes": {
     "serveStatic": true
   },
